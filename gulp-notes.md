@@ -5,18 +5,19 @@ reference: [](http://gulpjs.com)
 gulp is a toolkit for automating painful or time-consuming tasks in you development workflow, so you can stop messing around and build something. 
 
 ##Installation
-_Install the `gulp` command_
+
+####Install the `gulp` command
 
 `npm install --global gulp-cli`
 
 
-_Install `gulp` in your devDependencies_
+####Install `gulp` in your devDependencies
 
 Run this command in your project directory:
 `npm install --save-dav gulp`
 
 
-_Create a `gulpfile`_
+####Create a `gulpfile
 
 Create a file called `gulpfile.js` in your project root with these contents:
 
@@ -29,7 +30,7 @@ gulp.task('default', function() {
 ```
 
 
-_Test is out_
+####Test is out
 
 Run the gulp command in your project directory:
 
