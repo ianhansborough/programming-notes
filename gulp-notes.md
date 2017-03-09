@@ -6,18 +6,18 @@ gulp is a toolkit for automating painful or time-consuming tasks in you developm
 
 ##Installation
 
-#####Install the `gulp` command
+####Install the `gulp` command
 
 `npm install --global gulp-cli`
 
 
-#####Install `gulp` in your devDependencies
+####Install `gulp` in your devDependencies
 
 Run this command in your project directory:
 `npm install --save-dav gulp`
 
 
-#####Create a `gulpfile
+####Create a `gulpfile
 
 Create a file called `gulpfile.js` in your project root with these contents:
 
@@ -30,7 +30,7 @@ gulp.task('default', function() {
 ```
 
 
-#####Test is out
+####Test is out
 
 Run the gulp command in your project directory:
 
@@ -46,12 +46,12 @@ to run multiple tasks, you can use `gulp <task> <othertask>`
 ##gulp-sass
 Sass plugin for Gulp.
 
-#####Installation
+####Installation
 ```
 npm install gulp-sass --save-dev
 ```
 
-#####Basic Usage
+####Basic Usage
 
 Something like this will compile your Sass files: 
 
@@ -82,7 +82,7 @@ gulp.task('sass', function() {
 });
 ```
 
-#####Options
+####Options
 
 pass in an options object as the parameter to the `sass` function call. 
 
@@ -94,7 +94,7 @@ gulp.task('sass', function () {
 });
 ```
 
-#####Source Maps
+####Source Maps
 
 `gulp-sass` can be used with `gulp-sourcemaps` to generate source maps for the Sass to CSS compilation. you do need to initialize `gulp-sourcemaps` prior to running `gulp-sass` and write the source maps after running `gulp-sass`.
 
