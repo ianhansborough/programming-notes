@@ -57,3 +57,57 @@ Something like this will compile your Sass files:
 
 ```js
 'use strict';
+
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+
+gulp.task('sass', function() {
+	return gulp.src('./sass/**/*.scss')
+		.pipe(sass().on('error', sass.logError))
+		.pipe(gulp.dest('./css'));
+});
+
+gulp.task('sass:watch', function() {
+	gulp.watch('./sass/**/*.scss', ['sass']);
+});
+```
+
+You can also compile synchronously, doing something like this:
+
+```js
+gulp.task('sass', function() {
+	return gulp.src('./sass/**/*.scss')
+		.pipe(sass.sync().on('error', sass.logError))
+		.pipe(gulp.dest('./css'));
+});
+```
+
+#####Options
+
+pass in an options object as the parameter to the `sass` function call. 
+
+```js
+gulp.task('sass', function () {
+ return gulp.src('./sass/**/*.scss')
+   .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+   .pipe(gulp.dest('./css'));
+});
+```
+
+#####Source Maps
+
+`gulp-sass` can be used with `gulp-sourcemaps` to generate source maps for the Sass to CSS compilation. you do need to initialize `gulp-sourcemaps` prior to running `gulp-sass` and write the source maps after running `gulp-sass`.
+
+```js
+var sourcemaps = require('gulp-sourcemaps');
+ 
+gulp.task('sass', function () {
+ return gulp.src('./sass/**/*.scss')
+  .pipe(sourcemaps.init()) 						// Initialize gulp-sourcemaps here
+  .pipe(sass().on('error', sass.logError))
+  .pipe(sourcemaps.write()) 					// Write sourcemaps here 
+  .pipe(gulp.dest('./css'));  					// See the reference if you want to write source map to diff file.
+});
+```
+
+

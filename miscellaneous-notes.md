@@ -10,3 +10,13 @@ Strict mode prevents you from using undeclared variables and will cause the comp
 ##Why?
 Strict mode makes it easier to write "secure" Javascript.
 It changes previously accepted "bad syntax" into real errors.
+
+#Source Map
+_reference: <http://blog.teamtreehouse.com/introduction-source-maps>_
+
+##What is it?
+A source map provides a way of mapping code in a compressed file back to it's original position in a source file. 
+This means that you can easily debug your application even after your assets have been optimized.
+
+##Why?
+Using source maps allow developers to maintain a straightforward debugging environment while at the same time optimiing their site for performance. 
