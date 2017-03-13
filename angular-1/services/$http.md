@@ -1,4 +1,6 @@
 #$http 
+_reference: <https://code.angularjs.org/1.5.11/docs/api/ng/service/$http>_
+
 the `$http` serice is a core AngularJS service that facilitates communication with the remote HTTP servers via the browser's XMLHttpRequest object or via JSONP.
 
 ##General Usage
@@ -42,3 +44,6 @@ other shortcut methods:
 * $http.delete
 * $http.jsonp
 * $http.patch
+
+##Setting HTTP Headers
+
