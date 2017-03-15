@@ -4,7 +4,7 @@ _resource: <http://www.protractortest.org/#/>_
 end to end testing for AngularJS
 
 ##Main Benefits
-* built on top of WebDriverJS
+* built on top of WebDriverJS (better user-like simulation)
 * Supports Angular-specific locator strategies
 * Can automatically wait until pending tasks are finished to execute next step
 

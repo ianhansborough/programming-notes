@@ -62,3 +62,8 @@ JSONP works by returning the JSON data wrapped in a piece of Javascript code, us
 
 ##Summary
 JSONP allows browsers to work around the same-origin-policy via script element injection. this means injecting a script into the DOM via jQuery or other library that has a `src` attribute pointing to a cross origin site that returns a 'padded' response as a js block.
+
+
+
+
+
