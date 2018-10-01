@@ -63,7 +63,45 @@ JSONP works by returning the JSON data wrapped in a piece of Javascript code, us
 ##Summary
 JSONP allows browsers to work around the same-origin-policy via script element injection. this means injecting a script into the DOM via jQuery or other library that has a `src` attribute pointing to a cross origin site that returns a 'padded' response as a js block.
 
+# Function Constructors and Prototypes
+A normal function that is used to construct objects
+
+## how does it work? 
+inside of the constructor, attach properties to `this`. When you call a function constructor, use the `new` keyword. this tells javascript to return the values placed on the function's `this` as properties of an object.
+
+In addition, adding properties or methods to the prototype of a function constructor (or any object for that matter) means that all objects created from that function constructor will inherit the constructor's prototype.
+
+```js
+function Person(fn, ln) {
+	this.firstname = fn;
+	this.lastname = ln;
+}
+
+var john = new Person('John', 'Doe');
+
+Person.prototype.greet = function() {
+	console.log('hello there');
+}
+
+// all objects created using the Person contructor now have access to Person's prototype.
+john.greet()
+
+```
+
+# Passing by value / by reference
+
+primitive values (numbers, strings) pass by value. if `a` is in location *X*, and we set `b=a`, `b` will be in location *Y*
+
+objects pass by reference. if `a` is in location *X*, and we set `b=a`, `b` will be in location *X*
+
+# Char sets and encodings 
+all data must be represented as binary
 
 
+## What are charsets
+a representation of characters as numbers
+*unicode* is a popular charset
 
-
+## What is a character encoding 
+How a character is stored in binary. The numbers (or code points) are converted and stored in binary.
+*UTF-8* encodes code points as 8-bit bindary numbers
